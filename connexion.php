@@ -4,17 +4,13 @@ class Connexion {
 
     public static function initBdd() {
         try {
-/*                $host = '127.0.0.1';
-                $port = '3306';
-                $dbname = 'alacool';
-                $user = 'root';
-                $password = '';
-*/
+                        $host = 'mysql:host=127.0.0.1;dbname=alacool;charset=utf8';
+                        $user = 'root';
+                        $password = '';
 
-            $host = 'mysql:host=***SUPPRIME***;dbname=***SUPPRIME***;charset=utf8';
-            $user = '***SUPPRIME***';
-            $password = '***MOT-DE-PASSE-SUPPRIME***';
-
+//            $host = 'mysql:host=***SUPPRIME***;dbname=***SUPPRIME***;charset=utf8';
+//            $user = '***SUPPRIME***';
+//            $password = '***MOT-DE-PASSE-SUPPRIME***';
 
             self::$bdd = new PDO($host, $user, $password);
             self::$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
