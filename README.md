@@ -49,7 +49,9 @@ Le projet respecte scrupuleusement le patron de conception **MVC (Modèle-Vue-Co
     ```
 
 2.  **Configuration**
-    * Vérifier le fichier `connexion.php` à la racine pour s'assurer que les identifiants BDD (hôte, utilisateur, mot de passe) sont corrects.
+    * Créer la base de données puis y importer le script SQL du projet.
+    * Les identifiants ne sont **plus écrits dans le code** : `connexion.php` lit les variables d'environnement `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER` et `DB_PASS`. Sans elles, il utilise une base locale (`127.0.0.1:3306`, base `alacool`, utilisateur `root`, sans mot de passe).
+    * Ne jamais committer de mot de passe dans le dépôt.
 
 3.  **Lancement**
     * Placer le dossier dans votre serveur web local (WAMP, XAMPP, Laragon).
